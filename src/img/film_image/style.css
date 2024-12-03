@@ -1,0 +1,600 @@
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+body, html {
+    height: 100vh;
+    background-color: rgba(30, 30, 30, 1);
+}
+
+header {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex:1;
+    padding: 8px 0;
+    background-color: rgba(40, 40, 40, 1);
+    border-bottom:1px solid black ;
+}
+
+footer {
+    padding: 10px;
+    background-color: rgba(40, 40, 40, 1);
+    /* position: absolute; */
+    /* left: 0;
+    bottom: 0; */
+    width: 100%;
+    flex: 0 0 auto;
+    /* height: 80px; */
+}
+
+.logo_image_header img{
+    /* display: flex; */
+    width: 180px;
+    height: 100%;
+    margin-left: 30px;
+    /* flex:1; */
+}
+
+.header_login_button {
+    display: flex;
+    justify-content: flex-end;
+    flex:1;
+    margin-right: 60px;
+}
+
+.header_login_button a {
+    color: #fff;
+}
+
+.container_info {
+    height: 30rem;
+    width: 100%;
+    position: absolute;
+}
+
+.container_info img{
+    height: 100%;
+    width: 100%;
+    filter: brightness(57%);
+    -webkit-filter: brightness(57%);
+    margin-top: 3rem;
+    object-fit: cover;
+}
+
+.container { 
+    padding: 0 calc(40% - 590px);
+    flex: 1 0 auto;
+    z-index: 100;
+}
+
+.container_form_auth {
+    height: calc(100vh - 77.9px);
+}
+
+.container_img {
+    background-image: url('../img/main_background.png'); /* Путь к изображению */
+    background-size: cover; /* Масштабируем изображение, чтобы оно заполнило весь фон */
+    background-position: center; /* Центрируем изображение */
+    background-repeat: no-repeat; /* Избегаем повторения изображения */
+    margin: 0; /* Убираем отступы вокруг body для полноэкранного фона */
+    /* height: 100%; */
+}
+
+.logo_img img {
+    width: 240px;
+    height: 100%;
+}
+
+.main_login_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed; top: 50%; left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.login-container {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    background-color: rgba(40, 40, 40, 1);
+    font-weight: bold;
+  }
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(30, 30, 30, 1);
+    color:#fff;
+    font-weight: bold;
+  }
+
+.login-form button {
+    background-color: #e0e0e0;
+    color: #2e2e2e;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+  }
+
+.login-form button:hover {
+    background-color: #bbbbbb;
+  }
+
+.no_acc {
+    margin-top: 10px;
+}
+
+.no_acc a{
+    color: #fff;
+  }
+
+.info_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info_text {
+    text-align: center;
+    margin-top: 6rem;
+    z-index: 2;
+}
+
+.info_text h2 {
+    font-size: 32px;
+    color: #fff;
+}
+
+
+.info_text h1 {
+    font-size: 42px;
+    color: #fff;
+}
+
+.info_button {
+    z-index: 2;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #e7e7e7;
+    border-radius: 25px;
+    width: 20rem;
+    text-align: center;
+    color: #2e2e2e;
+    font-weight: bold;
+    transition: .2s;
+    margin-top: 12rem;
+}
+
+.info_button:hover {
+    background-color: #b8b8b8;
+    color: #1f1f1f;
+}
+
+.message {
+    margin-top: 5px;
+    color: #2de933;
+}
+
+.title_menu {
+    color:#d1f8ff;
+    transition: .2s;
+}
+
+.title_menu:hover {
+    color:#7cb6c0;
+}
+
+.info_button img {
+    width: 20px;
+    height: 100%;
+    margin-right: 5px;
+    /* padding-bottom: 3px; */
+}
+
+.logo_info {
+    z-index: 2;
+}
+
+.logo_info img {
+    width: 220px;
+    height: 100%;
+}
+
+.film_blog {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20rem;
+    margin-top: 6rem;
+}
+
+.film_blog_info {
+    background-color: rgb(66, 66, 66);
+    width: 250px;
+    margin-bottom: 3rem;
+    height: 100%;
+    padding: 15px 25px;
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.film_blog_image{
+    background-color: rgb(66, 66, 66);
+    width: 70%;
+    margin-bottom: 3rem;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.logout {
+    margin-left: 3rem;
+}
+
+.logout_btn {
+    color: rgb(143, 22, 22);
+    transition: .3s;
+}
+
+.logout_btn:hover {
+    color: rgb(199, 24, 24);
+}
+
+.film_blog_image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 3px solid rgb(66, 66, 66);
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(229, 229, 229, 0.2);
+    -moz-box-shadow: 0px 0px 15px 2px rgba(229, 229, 229, 0.2);
+    box-shadow: 0px 0px 15px 2px rgba(229, 229, 229, 0.2);
+}
+
+.hello {
+    color: #fff;
+    margin-right: 5px;
+}
+
+.info_user {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 3rem;
+    background-color: rgba(40, 40, 40, 1);
+    border-radius: 10px;
+    padding: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.User_name {
+    font-size: 25px;
+    color: #fff !important;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.main_user_info p {
+    color:#cfcfcf;
+}
+
+.films_user_info {
+    font-size: 18px;
+    margin-top: 15px;
+    color:#cfcfcf;
+}
+
+
+.info_user_avatar {
+    width: 220px;
+    height: 220px; 
+    overflow: hidden;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень для круга */
+    position: absolute;
+    background-color: #5f5f5f;
+    border: 1px solid #5f5f5f;
+    top: 80px;
+    right: 130px;
+}
+
+.info_user_avatar img {
+    /* width: 100%; */
+    height: auto;
+    object-fit: cover;
+}
+
+.info_film {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.count_film {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    background-color: rgba(40, 40, 40, 1);
+    border-radius: 10px;
+    padding: 1.6rem;
+    margin-bottom: 3rem;
+    width: 70%;
+    color: #fff;
+    text-align: center;
+    height: 350px;
+    font-weight: bold;
+    align-items: center;
+    flex-direction: column;
+}
+
+.count_film p {
+    margin-top: 1rem;
+    font-size: 23px;
+}
+
+.count_film p span {
+    font-size: 65px;
+
+}
+
+.count_film_span {
+    font-size: 15px !important;
+    font-weight: normal;
+}
+
+.reactions_films {
+    margin-left: 30px;
+    margin-top: 3rem;
+    background-color: rgba(40, 40, 40, 1);
+    border-radius: 10px;
+    padding: 1.6rem;
+    margin-bottom: 3rem;
+    width: 30%;
+}
+
+.reactions_films {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.like, .dislike{
+    width: 220px;
+    text-align: left;
+    display: flex;
+    margin: 3px auto;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    background-color: rgba(35, 35, 35, 1);
+    border-radius: 15px;
+    padding: 10px 5px;
+    font-weight: bold;
+}
+
+.count p{
+   opacity: .5;
+   font-weight: normal; 
+}
+
+
+.like p, .dislike p {
+    margin: 10px 0;
+} 
+
+
+.stats {
+    margin: auto;
+    margin-top: 3rem;
+    background-color: rgba(40, 40, 40, 1);
+    border-radius: 10px;
+    padding: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.stats h2 {
+    margin-left: 7%;
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.stats_blogs {
+    display: flex;
+    justify-content: space-around; 
+}
+
+.stats_info_image {
+    min-height: 320px;
+    position: relative;
+}
+
+.stats_info_image img {
+    margin-top: 15px;
+    width: 270px;
+    height: 100%;
+}
+
+.stats_info_image p {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    color: #fff;
+}
+
+.stats_info {
+    margin: 15px auto;
+    text-align: center;
+    width: 180px;
+    color: #fff;
+}
+
+.movies_info {
+    color: #fff;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.movies_info h2 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.movies_info p {
+    font-size: 30px;
+}
+
+.films {
+    /* width: 80%; */
+    /* background-color: rgba(50, 50, 50, 1);; */
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    /* margin-bottom: 5rem; */
+}  
+
+.film {
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 20px 10px;
+    text-align: center;
+    margin-bottom: 3rem;
+    background-color: rgba(50, 50, 50, 1);
+    color: #fff;
+}
+
+.film strong {
+    flex:1;
+}
+
+/* генерация */
+
+#buttons {
+    width: 860px;
+    margin: auto;
+    text-align: center;
+}
+
+.genre-button {
+    margin: 5px;
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: rgba(50, 50, 50, 1);
+    cursor: pointer;
+    border-radius: 10px;
+    color:#e0e0e0;
+}
+#movies-list {
+    margin-top: 40px;
+}
+
+/* Генерация */
